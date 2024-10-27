@@ -29,8 +29,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          "I create modern, responsive websites that combine creativity and technical skill. With a focus on web development and UI/UX design, I bring ideas to life with seamless digital experiences."
-          </p>
+          I create modern, responsive websites that combine creativity and technical skill. With a focus on web development and UI/UX design, I bring ideas to life with seamless digital experiences.          </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <button className="px-6 py-3 w-full sm:w-auto rounded-full bg-gradient-to-br from-red-500 via-yellow-600 to-pink-800 hover:bg-slate-200 text-black">
               Hire Me
