@@ -2,32 +2,220 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles.css or globals.css */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: #121212;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: #0a0a0a;
+  
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.skill-container {
+  position: relative;
+  width: 300px; /* Adjust size based on your needs */
+  height: 300px; /* Adjust size based on your needs */
+  perspective: 800px; /* Perspective for 3D effect */
+  margin: auto; /* Center the container horizontally */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center child elements horizontally */
+  align-items: center; /* Center child elements vertically */
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Keyframes for individual swing animation */
+  @keyframes swing {
+    0% {
+      transform: rotateY(0deg) translateZ(200px);
+    }
+    100% {
+      transform: rotateY(360deg) translateZ(200px);
+    }
   }
+
+  .skill-item {
+    position: absolute;
+    width: 800px; /* Size of the skill logo */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    margin: 10px;
+    padding-left: 20px;
+  }
+
+  /* Adjust positioning and animation timing for each skill item based on index */
+  .skill-item:nth-child(1) {
+    animation: swing 8s linear infinite;
+    transform: rotateY(0deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(2) {
+    animation: swing 8s linear infinite 1s; /* Delayed start */
+    transform: rotateY(30deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(3) {
+    animation: swing 8s linear infinite 2s; /* Delayed start */
+    transform: rotateY(60deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(4) {
+    animation: swing 8s linear infinite 3s; /* Delayed start */
+    transform: rotateY(90deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(5) {
+    animation: swing 8s linear infinite 4s; /* Delayed start */
+    transform: rotateY(120deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(6) {
+    animation: swing 8s linear infinite 5s; /* Delayed start */
+    transform: rotateY(150deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(7) {
+    animation: swing 8s linear infinite 6s; /* Delayed start */
+    transform: rotateY(180deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(8) {
+    animation: swing 8s linear infinite 7s; /* Delayed start */
+    transform: rotateY(210deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(9) {
+    animation: swing 8s linear infinite 8s; /* Delayed start */
+    transform: rotateY(240deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(10) {
+    animation: swing 8s linear infinite 9s; /* Delayed start */
+    transform: rotateY(270deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(11) {
+    animation: swing 8s linear infinite 10s; /* Delayed start */
+    transform: rotateY(300deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(12) {
+    animation: swing 8s linear infinite 11s; /* Delayed start */
+    transform: rotateY(330deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(13) {
+    animation: swing 8s linear infinite 12s; /* Delayed start */
+    transform: rotateY(360deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(14) {
+    animation: swing 8s linear infinite 13s; /* Delayed start */
+    transform: rotateY(390deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+  .skill-item:nth-child(15) {
+    animation: swing 8s linear infinite 14s; /* Delayed start */
+    transform: rotateY(420deg) translateZ(100px); /* Adjust translateZ for centering */
+  }
+}
+/* Keyframes for Moving Gradient Border */
+@keyframes movingGradient {
+  0% {
+    background-position: 0% 50%; /* Start from left */
+  }
+  25% {
+    background-position: 100% 50%; /* Move to the right */
+  }
+  50% {
+    background-position: 100% 100%; /* Move to the bottom right */
+  }
+  75% {
+    background-position: 0% 100%; /* Move to the bottom left */
+  }
+  100% {
+    background-position: 0% 50%; /* Return to the start */
+  }
+}
+
+/* Applied to the project card container */
+.reflected-border {
+  border-width: 4px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-radius: 8px; /* Adjust for rounded corners */
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.5), rgba(247, 211, 7, 0.5)); /* Gradient color */
+  background-size: 200% 200%; /* For smoother transition */
+  animation: movingGradient 4s linear infinite; /* Duration and timing */
+}
+@keyframes cardFadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes cardReflect {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05); /* Slightly larger to create a reflective look */
+  }
+}
+
+.animate-card-1 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.animate-card-2 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.animate-card-3 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.animate-card-4 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.animate-card-5 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-card-6 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1); /* Slight enlargement */
+  }
+}
+
+.sparkle {
+  animation: sparkle 2s infinite; /* 2s animation duration, infinite loop */
 }
