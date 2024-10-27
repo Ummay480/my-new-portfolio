@@ -29,4 +29,3 @@ export function PageLayout({
   )
 }
 
-export default PageLayout;
