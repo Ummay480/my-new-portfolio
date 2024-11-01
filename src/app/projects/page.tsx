@@ -1,14 +1,14 @@
 import React from 'react';
-import ProjectSection from '../../Components/ProjectSection';
-import Contacts from "../../Components/Contacts";
-import Header3 from "../../Components/Header3";
+import ProjectSection from '../../components/ProjectSection';
+import Contacts from "../../components/Contacts";
+import Header1 from "../../components/Header3";
 
 export default function Projects() {
   return (
   
     <>
-     <div>
-      <Header3/>
+     <div className='max-w-full'>
+      <Header1/>
     </div>
 
       <div className='flex justify-center mt-40'>

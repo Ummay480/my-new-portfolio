@@ -10,7 +10,7 @@ const Contacts = () => {
         <div className="flex flex-col justify-center items-center text-center">
           <div className="mb-4">
             <h2  className="text-4xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">
-           Let&apos;s Connect
+              Let&apos;s Connect
             </h2>
             <p className="text-[#ADB7BE] text-sm mt-2">
               Follow me on social media or reach out via email!

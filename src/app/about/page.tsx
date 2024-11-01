@@ -1,13 +1,13 @@
 
 import React from 'react';
-import AboutSection from '../../Components/AboutSection';
-import Header from "../../Components/Header";
-import Contacts from "../../Components/Contacts";
+import AboutSection from '../../components/AboutSection';
+import Header from "../../components/Header";
+import Contacts from "../../components/Contacts";
 
 const AboutPage: React.FC = () => {
   return (
 <>
-    <div>
+    <div className='max-w-full'>
       <Header/>
     </div>
   

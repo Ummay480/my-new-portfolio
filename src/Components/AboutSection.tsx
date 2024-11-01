@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { TypeAnimation } from "react-type-animation"; // Import TypeAnimation
+import { TypeAnimation } from "react-type-animation"; 
 import { FaCode, FaGraduationCap, FaCertificate, FaClipboardList } from 'react-icons/fa'; // Import icons
 
 const TAB_DATA = [
@@ -35,7 +35,7 @@ const TAB_DATA = [
   {
     title: "Certifications",
     id: "certifications",
-    icon: <FaCertificate className="inline-block mr-2" />,
+    icon: <FaCertificate className="inline-block mr-2" />, // Icon for Certifications
     content: (
       <ul className="list-disc pl-2">
         <li>DigiSkills</li>
@@ -48,7 +48,7 @@ const TAB_DATA = [
   {
     title: "Expertise",
     id: "expertise",
-    icon: <FaClipboardList className="inline-block mr-2" />, // Icon for Expertise
+    icon: <FaClipboardList className="inline-block mr-2" />, 
     content: (
       <ul className="list-disc pl-2">
         <li>Web Development</li>
@@ -86,7 +86,7 @@ const AboutSection: React.FC = () => {
             repeat={Infinity}
           />
           <p className="text-base lg:text-lg">
-            I am passionate web developer with experience in building modern
+            I&apos;m a passionate web developer with experience in building modern
             and responsive websites using the latest technologies. I enjoy
             turning complex problems into simple, beautiful, and intuitive
             designs.

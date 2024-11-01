@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global styles */
+/* styles.css or globals.css */
 :root {
   --background: #121212;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
+  
   }
 }
 
@@ -21,39 +23,6 @@ body {
   margin: 0;
 }
 
-/* Profile Image Styles */
-.profile-image {
-  border-radius: 50%;
-  position: relative; /* Necessary for stacking context */
-  z-index: 1; /* Ensure image is above the background */
-  width: 100%; /* Make it responsive */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Neon Border Animation */
-@keyframes thinNeonBorder {
-  0%,
-  100% {
-    border-color: #ff3e3e;
-    box-shadow: 0 0 5px #ff3e3e, 0 0 10px #ff3e3e;
-  }
-  50% {
-    border-color: #ffe53e;
-    box-shadow: 0 0 5px #ffe53e, 0 0 10px #ffe53e;
-  }
-}
-
-.border-thin-neon {
-  border: 1px solid transparent;
-  animation: thinNeonBorder 2s infinite alternate;
-}
-
-/* 3D Shadow */
-.shadow-3d {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 6px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Skill Container Styles */
 .skill-container {
   position: relative;
   width: 300px; /* Adjust size based on your needs */
@@ -151,23 +120,102 @@ body {
     transform: rotateY(420deg) translateZ(100px); /* Adjust translateZ for centering */
   }
 }
-
-/* Backface Visibility */
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-/* Add this CSS to your styles (e.g., in a CSS file or a style tag) */
-@keyframes rotate {
+/* Keyframes for Moving Gradient Border */
+@keyframes movingGradient {
   0% {
-    transform: rotate(0deg);
+    background-position: 0% 50%; /* Start from left */
+  }
+  25% {
+    background-position: 100% 50%; /* Move to the right */
+  }
+  50% {
+    background-position: 100% 100%; /* Move to the bottom right */
+  }
+  75% {
+    background-position: 0% 100%; /* Move to the bottom left */
   }
   100% {
-    transform: rotate(360deg);
+    background-position: 0% 50%; /* Return to the start */
   }
 }
 
-.rotate-animation {
-  animation: rotate 30s linear infinite; /* Adjust the duration as needed */
+/* Applied to the project card container */
+.reflected-border {
+  border-width: 4px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-radius: 8px; /* Adjust for rounded corners */
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.5), rgba(247, 211, 7, 0.5)); /* Gradient color */
+  background-size: 200% 200%; /* For smoother transition */
+  animation: movingGradient 4s linear infinite; /* Duration and timing */
+}
+@keyframes cardFadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
 }
 
+@keyframes cardReflect {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05); /* Slightly larger to create a reflective look */
+  }
+}
+
+.animate-card-1 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.animate-card-2 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.animate-card-3 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.animate-card-4 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.animate-card-5 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-card-6 {
+  animation: cardReflect 2s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1); /* Slight enlargement */
+  }
+}
+
+.sparkle {
+  animation: sparkle 2s infinite; /* 2s animation duration, infinite loop */
+}

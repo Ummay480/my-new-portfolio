@@ -2,68 +2,96 @@
 import React from "react";
 import Image from "next/image";
 
-export const Header3: React.FC = () => {
+export const Header1: React.FC = () => {
   return (
-    <div className="relative w-full px-4 py-4 md:py-6 bg-gradient-to-br from-red-600 to-yellow-600 flex flex-col items-center justify-center">
-      
-      {/* Icons at the top with adjusted margins */}
-      <div className="relative flex flex-wrap justify-center items-center z-10 opacity-80 rounded-full mt-6 space-x-4 md:space-x-6">
-        {/* Ecommerce Icon */}
-        <div className="sparkle transition-transform duration-300 hover:scale-110 mt-6">
-          <Image
-            src="/assets/ecommerce.png"
-            alt="ecommerce-Icon"
-            width={150}
-            height={100}
-            className="w-20 md:w-28 lg:w-32"
-          />
-        </div>
+    <div className="relative w-full px-4 py-2 md:px-10 md:py-12 bg-gradient-to-br from-red-600 to-yellow-600 -mt-10 md:mt-5 lg:mt-5">
+      {/* Fixed "Let's Connect" image outside the moving icons */}
+      <div className="absolute inset-0 flex justify-center items-center z-10">
+  <Image
+    src="/assets/lets-connect.png"
+    alt="Let's Connect Icon"
+    width={400}   
+    height={100} 
+    className="m-1 w-60 sm:w-[400] md:w-[500px] lg:w-[600px] h-auto"
+  />
+</div>
 
-        {/* API Icon */}
-        <div className="sparkle transition-transform duration-300 hover:scale-110 mt-6">
-          <Image
-            src="/assets/api3.png"
-            alt="api-Icon"
-            width={150}
-            height={100}
-            className="w-20 md:w-28 lg:w-32"
-          />
-        </div>
 
-        {/* Portfolio Icon */}
-        <div className="sparkle transition-transform duration-300 hover:scale-110 mt-6">
-          <Image
-            src="/assets/portfolio1.png"
-            alt="Portfolio Icon"
-            width={150}
-            height={100}
-            className="w-20 md:w-28 lg:w-32"
-          />
+
+      {/* Orbiting social media icons */}
+      <div className="absolute inset-0 flex justify-center items-center z-0 opacity-80 rounded-full">
+        <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+          {/* WhatsApp Icon */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 animate-orbit">
+            <Image
+              src="/assets/WhatsApp.png"
+              alt="WhatsApp Icon"
+              width={40}
+              height={40}
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+            />
+          </div>
+
+          {/* LinkedIn Icon */}
+          <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 animate-reverse-orbit">
+            <Image
+              src="/assets/linkedin.png"
+              alt="LinkedIn Icon"
+              width={40}
+              height={40}
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+            />
+          </div>
+
+          {/* Instagram Icon */}
+          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 animate-orbit">
+            <Image
+              src="/assets/insta.png"
+              alt="Instagram Icon"
+              width={40}
+              height={40}
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+            />
+          </div>
+
+          {/* Facebook Icon */}
+          <div className="absolute top-1/2 left-full transform -translate-y-1/2 animate-reverse-orbit">
+            <Image
+              src="/assets/facebook.png"
+              alt="Facebook Icon"
+              width={40}
+              height={40}
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+            />
+          </div>
+
+          {/* Twitter Icon */}
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-orbit">
+            <Image
+              src="/assets/twiter.png"
+              alt="Twitter Icon"
+              width={40}
+              height={40}
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+            />
+          </div>
         </div>
       </div>
 
-      {/* Main Project Image with Glass Effect */}
-      <div className="relative flex justify-center items-center mt-6">
-        {/* Project Image moved further to the left */}
-        <div className="relative z-10 -ml-40">
-          <Image
-            src="/assets/projects.png"
-            alt="Project"
-            width={250}
-            height={100}
-            className="w-60 md:w-80 lg:w-96"
-          />
-        </div>
+      {/* Glassmorphism container */}
+      <div className="relative z-10 mx-auto p-4 sm:p-6 md:p-8 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg backdrop-blur-lg bg-white bg-opacity-20 shadow-md border border-white/10 rounded-lg mt-64 sm:mt-60 mb-16 md:mb-12 lg:mt-48 lg:mb-12">
+  <div className="flex justify-center px-6 py-5">
+    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center text-white">
+     Projects
+    </h1>
+  </div>
+</div>
 
-        {/* Glassmorphism Container overlapping the image (left aligned) */}
-        <div className="absolute left-0 z-20 w-64 h-28 md:w-80 md:h-32 lg:w-96 lg:h-40 backdrop-blur-lg bg-white bg-opacity-20 shadow-md border border-white/10 rounded-lg flex items-center justify-center">
-          <h1 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white">
-            My Projects
-          </h1>
-        </div>
-      </div>
+
+
+
     </div>
   );
 };
 
-export default Header3;
+export default Header1;

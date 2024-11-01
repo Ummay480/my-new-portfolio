@@ -15,6 +15,9 @@ export const Header1: React.FC = () => {
     className="m-1 w-60 sm:w-[400] md:w-[500px] lg:w-[600px] h-auto"
   />
 </div>
+
+
+
       {/* Orbiting social media icons */}
       <div className="absolute inset-0 flex justify-center items-center z-0 opacity-80 rounded-full">
         <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
