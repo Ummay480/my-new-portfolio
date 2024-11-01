@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import ProjectCard from './ProjectCard';
 
 const projects = [
@@ -12,7 +12,7 @@ const projects = [
     title: 'Real Estate',
     imageSrc: '/assets/project1.jpeg',
     logoSrc: '/assets/figma-logo.svg',
-    link: '#',
+    link: 'https://real-estate-omega-topaz.vercel.app', 
   },
   {
     title: 'E-Commerce',
@@ -30,7 +30,7 @@ const projects = [
     title: 'Resume Builder',
     imageSrc: '/assets/project4.jpeg',
     logoSrc: '/assets/ts-logo.svg',
-    link: '#',
+    link: 'https://resume-builder-nu-two.vercel.app/',
   },
   {
     title: "Calculator",
