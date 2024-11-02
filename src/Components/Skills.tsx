@@ -33,7 +33,7 @@ const Skills = () => {
         </h2>
 
         {/* Container for skill logos with globe rotation */}
-        <div className="relative w-full h-72 animate-rotate-globe flex justify-center items-center">
+        <div className="relative w-full h-72 animate-rotate-globe flex justify-center items-center -mb-96">
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -45,9 +45,9 @@ const Skills = () => {
               <Image
                 src={skill.image}
                 alt={`${skill.title} logo`}
-                className="skill-logo p-10"
-                width={150}
-                height={150}
+                className="skill-logo p-10 gap-6"
+                width={200}
+                height={200}
               />
             </div>
           ))}

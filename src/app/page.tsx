@@ -9,7 +9,6 @@ import ContactUs from '../components/ContactForm';
 import Contacts from "../components/Contacts"
 import PolygonCard from '../components/PolygonCard';
 
-
 const HomePage: React.FC = () => {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212] container mx-auto">
@@ -34,7 +33,7 @@ const HomePage: React.FC = () => {
            <h1  className="text-4xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">My Projects</h1>
          <PolygonCard />
         <ProjectSection />
-      </div>
+         </div>
 
       
       {/* Skill Section */}

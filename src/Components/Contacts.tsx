@@ -8,7 +8,7 @@ const Contacts = () => {
     <footer className="bg-[#121212] py-8 mt-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col justify-center items-center text-center">
-          <div className="mb-4">
+          <div className="mb-4 -mt-20">
             <h2  className="text-4xl font-extrabold bg-gradient-to-r from-red-600 to-yellow-600 text-transparent bg-clip-text">
               Let&apos;s Connect
             </h2>

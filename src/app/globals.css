@@ -219,3 +219,15 @@ body {
 .sparkle {
   animation: sparkle 2s infinite; /* 2s animation duration, infinite loop */
 }
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit-container {
+  animation: orbit 20s linear infinite;
+}
